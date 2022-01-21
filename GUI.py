@@ -42,7 +42,9 @@ if st.checkbox('Show data'):
 eda = st.checkbox('Exploratory Data Analysis')
 if eda and data:
     st.text("")
-    st_profile_report(df)
+    pr = df.profile_report()
+
+    st_profile_report(pr)
     # ProfileReport(df, explorative=True)
     #rep = ProfileReport(df, explorative=True)
     # rep.to_file(BASE_DIR+'EDA and Performance reports\\visualization{}.html'.format(' of '+ re.sub('.csv', '', str(data_name))))
