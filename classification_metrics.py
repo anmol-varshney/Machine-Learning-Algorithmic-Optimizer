@@ -49,46 +49,46 @@ def metrics(test_features, y_test, predictions, classifier, data_name, algorithm
     plt.xlabel('Predictions', fontsize=18)
     plt.ylabel('Actuals', fontsize=18)
     plt.title('Confusion Matrix', fontsize=18)
-    plt.savefig(BASE_DIR+'EDA and Performance reports/{} confusion_matrix of {}.png'.format(algorithm_selected, re.sub('.csv', '', str(data_name))))
+    # plt.savefig(BASE_DIR+'EDA and Performance reports/{} confusion_matrix of {}.png'.format(algorithm_selected, re.sub('.csv', '', str(data_name))))
              
-    ###################
+    # ###################
     
     
-    htmlfile = open(BASE_DIR+'EDA and Performance reports\\{} performance_report of {} .html'.format(algorithm_selected, re.sub('.csv', '', str(data_name))),"w")
-    html_template = """<html>
-    <head>
-    <title>Performance_report</title>
-    </head>
-    <body><div style="background: linear-gradient(to left, #008080 0%, #E0FFFF 100%); margin-left: 45px;">
-    <h1 style="color: #E0FFFF; background: cadetblue;">Performance Report</h1>
-    </div>
-    </body>
-    </html>
-    """
+    # htmlfile = open(BASE_DIR+'EDA and Performance reports\\{} performance_report of {} .html'.format(algorithm_selected, re.sub('.csv', '', str(data_name))),"w")
+    # html_template = """<html>
+    # <head>
+    # <title>Performance_report</title>
+    # </head>
+    # <body><div style="background: linear-gradient(to left, #008080 0%, #E0FFFF 100%); margin-left: 45px;">
+    # <h1 style="color: #E0FFFF; background: cadetblue;">Performance Report</h1>
+    # </div>
+    # </body>
+    # </html>
+    # """
     
-    line_breaks = """
-    <html>
-    <br><br>
-    </html>
-    """
+    # line_breaks = """
+    # <html>
+    # <br><br>
+    # </html>
+    # """
         
-    htmlfile.write(html_template)
-    htmlfile.write('<div style="margin-left: 45px;"> <hr> </div>')
-    htmlfile.write(line_breaks)
-    htmlfile.write('<div style="margin-left: 45px;"> <b>1. Classification Report</b>')
-    htmlfile.write(line_breaks)
-    htmlfile.write(report_df_html)
-    htmlfile.write(line_breaks)
-    htmlfile.write('<b>2. Model Scores</b>')
-    htmlfile.write(line_breaks)
-    htmlfile.write(scores_df_html)
-    htmlfile.write(line_breaks)
-    htmlfile.write(line_breaks)
-    htmlfile.write("<img src =  '{}'> </div>".format(BASE_DIR+'EDA and Performance reports/{} confusion_matrix of {}.png'.format(algorithm_selected, re.sub('.csv', '', str(data_name)))))
-    htmlfile.write(line_breaks)
+    # htmlfile.write(html_template)
+    # htmlfile.write('<div style="margin-left: 45px;"> <hr> </div>')
+    # htmlfile.write(line_breaks)
+    # htmlfile.write('<div style="margin-left: 45px;"> <b>1. Classification Report</b>')
+    # htmlfile.write(line_breaks)
+    # htmlfile.write(report_df_html)
+    # htmlfile.write(line_breaks)
+    # htmlfile.write('<b>2. Model Scores</b>')
+    # htmlfile.write(line_breaks)
+    # htmlfile.write(scores_df_html)
+    # htmlfile.write(line_breaks)
+    # htmlfile.write(line_breaks)
+    # htmlfile.write("<img src =  '{}'> </div>".format(BASE_DIR+'EDA and Performance reports/{} confusion_matrix of {}.png'.format(algorithm_selected, re.sub('.csv', '', str(data_name)))))
+    # htmlfile.write(line_breaks)
     
-    htmlfile.close()
+    # htmlfile.close()
     
-    st.success('The performance report of algorithm ({}) on {}, with the selected preprocessing techniques, has been saved to this location; \n {}'.format(algorithm_selected, re.sub('.csv', '', str(data_name)), BASE_DIR+'EDA and Performance reports/{} performance_report of {} .html'.format(algorithm_selected, re.sub('.csv', '', str(data_name)))))
+    # st.success('The performance report of algorithm ({}) on {}, with the selected preprocessing techniques, has been saved to this location; \n {}'.format(algorithm_selected, re.sub('.csv', '', str(data_name)), BASE_DIR+'EDA and Performance reports/{} performance_report of {} .html'.format(algorithm_selected, re.sub('.csv', '', str(data_name)))))
     
     return df_classification_report, measures, plot_confusion_matrix(estimator=classifier, X=test_features, y_true=y_test, labels=classifier.classes_, cmap='Blues')
