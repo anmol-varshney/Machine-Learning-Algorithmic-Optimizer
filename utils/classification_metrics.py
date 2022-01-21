@@ -1,4 +1,4 @@
-BASE_DIR = 'C:/Users/Acer/Desktop/VProject/'
+BASE_DIR = 'C:/Users/Acer/Desktop/Machine Learning Algorithmic Optimizer/'
 import warnings
 from numpy.lib.function_base import average
 import matplotlib.pyplot as plt
@@ -92,5 +92,3 @@ def metrics(test_features, y_test, predictions, classifier, data_name, algorithm
     st.success('The performance report of algorithm ({}) on {}, with the selected preprocessing techniques, has been saved to this location; \n {}'.format(algorithm_selected, re.sub('.csv', '', str(data_name)), BASE_DIR+'EDA and Performance reports/{} performance_report of {} .html'.format(algorithm_selected, re.sub('.csv', '', str(data_name)))))
     
     return df_classification_report, measures, plot_confusion_matrix(estimator=classifier, X=test_features, y_true=y_test, labels=classifier.classes_, cmap='Blues')
-
-
