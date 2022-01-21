@@ -1,4 +1,4 @@
-BASE_DIR = 'C:/Users/Acer/Desktop/Machine Learning Algorithmic Optimizer/'
+BASE_DIR = './Machine Learning Algorithmic Optimizer/'
 import warnings
 from numpy.lib.function_base import average
 import matplotlib.pyplot as plt

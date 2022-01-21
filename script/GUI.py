@@ -1,4 +1,4 @@
-BASE_DIR = 'C:/Users/Acer/Desktop/Machine Learning Algorithmic Optimizer/'
+BASE_DIR = './Machine Learning Algorithmic Optimizer/'
 dataset_path = BASE_DIR+'datasets/'
 from hashlib import new
 import streamlit as st
