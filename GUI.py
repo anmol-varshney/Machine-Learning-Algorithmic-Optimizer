@@ -11,7 +11,8 @@ from data_transformation import Normalization, Discretization, Attribute_selecti
 from data_reduction import Attribute_subset_selection, Dimensionality_reduction
 from data_splitting import Split_data, space_res, space
 import ml_models
-from pandas_profiling import ProfileReport
+#from pandas_profiling import ProfileReport
+from streamlit_pandas_profiling import st_profile_report
 import re
 import webbrowser
 import warnings
@@ -41,12 +42,12 @@ if st.checkbox('Show data'):
 eda = st.checkbox('Exploratory Data Analysis')
 if eda and data:
     st.text("")
-    
+    st_profile_report(df)
     # ProfileReport(df, explorative=True)
-    rep = ProfileReport(df, explorative=True)
+    #rep = ProfileReport(df, explorative=True)
     # rep.to_file(BASE_DIR+'EDA and Performance reports\\visualization{}.html'.format(' of '+ re.sub('.csv', '', str(data_name))))
-    st.success('The Data visualization has been done.')
-    webbrowser.open_new_tab(rep)
+    #st.success('The Data visualization has been done.')
+    #webbrowser.open_new_tab(rep)
     # st.write('The Visualization report for the selected dataset has been saved to this location {}'.format(BASE_DIR+'EDA and Performance reports/visualization{}.html'.format(' of '+re.sub('.csv','', str(data_name)))))
     st.write('<p style="text-align: left;"><b>{}</b>{}</p>'.format('Note: ', 'Please deselect the Exploratory Data Analysis checkbox for smoother performance.'), unsafe_allow_html=True)
     space()
