@@ -5,7 +5,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier
 from xgboost import XGBClassifier
 from sklearn.linear_model import LogisticRegression
-from utils.classification_metrics import metrics
+from classification_metrics import metrics
 import warnings
 warnings.filterwarnings("ignore")
 
