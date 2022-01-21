@@ -11,7 +11,7 @@ from data_transformation import Normalization, Discretization, Attribute_selecti
 from data_reduction import Attribute_subset_selection, Dimensionality_reduction
 from data_splitting import Split_data, space_res, space
 import ml_models
-#from pandas_profiling import ProfileReport
+from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 import re
 import webbrowser
