@@ -1,6 +1,6 @@
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
-from catboost import CatBoostClassifier
+#from catboost import CatBoostClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, GradientBoostingClassifier
 from xgboost import XGBClassifier
@@ -45,12 +45,12 @@ def Random_forest_classifier(X_train, y_train, X_test, y_test, data_name, algori
 
     return metrics(X_test, y_test, model_pred, model, data_name, algorithm_selected)
    
-def Catboost_classifier(X_train, y_train, X_test, y_test, data_name, algorithm_selected):
-    model = CatBoostClassifier()
-    model.fit(X_train,y_train)
-    model_pred = model.predict(X_test)
+# def Catboost_classifier(X_train, y_train, X_test, y_test, data_name, algorithm_selected):
+#     model = CatBoostClassifier()
+#     model.fit(X_train,y_train)
+#     model_pred = model.predict(X_test)
 
-    return metrics(X_test, y_test, model_pred, model, data_name, algorithm_selected)
+#     return metrics(X_test, y_test, model_pred, model, data_name, algorithm_selected)
    
 def Adaboost_classifier(X_train, y_train, X_test, y_test, data_name, algorithm_selected):
     model = AdaBoostClassifier()

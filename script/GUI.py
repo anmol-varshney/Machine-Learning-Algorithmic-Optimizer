@@ -139,7 +139,7 @@ if preprocessing=='Data preprocessing':
    
 if st.checkbox('Start model deployment'):
     #models
-    algo = st.selectbox('Select your Machine Learning algorithm:', ['None', 'AdaBoost', 'CatBoost', 'Decision Tree', 'Gradient Boosting Classifier', 'K Nearest Neighbors', 'Logistic Regression', 'Random Forest', 'Support Vector Machine', 'XGBoost Classifier'])
+    algo = st.selectbox('Select your Machine Learning algorithm:', ['None', 'AdaBoost', 'Decision Tree', 'Gradient Boosting Classifier', 'K Nearest Neighbors', 'Logistic Regression', 'Random Forest', 'Support Vector Machine', 'XGBoost Classifier'])
     ratio = st.slider('How much data do you want in training set?', min_value=0.6, max_value=0.9, step=0.1)
     
     splitted_data = Split_data(new_new_temp_data, target, split_ratio=abs(1.0-ratio))
@@ -166,9 +166,9 @@ if st.checkbox('Start model deployment'):
         report, measure, mat = ml_models.Adaboost_classifier(X_train=X_train,  X_test=X_test, y_train=y_train, y_test=y_test, data_name=data_name, algorithm_selected = algo)  
         space_res(report, measure, mat)
             
-    if algo=='CatBoost':
-        report, measure, mat = ml_models.Catboost_classifier(X_train=X_train,  X_test=X_test, y_train=y_train, y_test=y_test, data_name=data_name, algorithm_selected = algo)  
-        space_res(report, measure, mat)   
+    # if algo=='CatBoost':
+    #     report, measure, mat = ml_models.Catboost_classifier(X_train=X_train,  X_test=X_test, y_train=y_train, y_test=y_test, data_name=data_name, algorithm_selected = algo)  
+    #     space_res(report, measure, mat)   
             
     if algo=='K Nearest Neighbors':
         report, measure, mat = ml_models.K_neighnors_classifier(X_train=X_train,  X_test=X_test, y_train=y_train, y_test=y_test, data_name=data_name, algorithm_selected = algo)  
