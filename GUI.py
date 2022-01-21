@@ -27,7 +27,7 @@ data = st.file_uploader("Upload your csv data file", type='csv')
 
 if data:
     data_name = data.name
-    df = pd.read_csv(dataset_path+str(data_name))
+    df = pd.read_csv(data)
 if st.checkbox('Show data'):
     st.text("")
     st.write("Shape of data: ",df.shape)
