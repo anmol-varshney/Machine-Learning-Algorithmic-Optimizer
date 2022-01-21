@@ -42,11 +42,11 @@ eda = st.checkbox('Exploratory Data Analysis')
 if eda and data:
     st.text("")
     
-    
-    rep = ProfileReport(df, explorative=True)
-    rep.to_file(BASE_DIR+'EDA and Performance reports\\visualization{}.html'.format(' of '+ re.sub('.csv', '', str(data_name))))
+    ProfileReport(df, explorative=True)
+    #rep = ProfileReport(df, explorative=True)
+    # rep.to_file(BASE_DIR+'EDA and Performance reports\\visualization{}.html'.format(' of '+ re.sub('.csv', '', str(data_name))))
     st.success('The Data visualization has been done.')
-    webbrowser.open_new_tab(BASE_DIR+'EDA and Performance reports\\visualization{}.html'.format(' of '+re.sub('.csv','', str(data.name))))
+    #webbrowser.open_new_tab(BASE_DIR+'EDA and Performance reports\\visualization{}.html'.format(' of '+re.sub('.csv','', str(data.name))))
     # st.write('The Visualization report for the selected dataset has been saved to this location {}'.format(BASE_DIR+'EDA and Performance reports/visualization{}.html'.format(' of '+re.sub('.csv','', str(data_name)))))
     st.write('<p style="text-align: left;"><b>{}</b>{}</p>'.format('Note: ', 'Please deselect the Exploratory Data Analysis checkbox for smoother performance.'), unsafe_allow_html=True)
     space()
