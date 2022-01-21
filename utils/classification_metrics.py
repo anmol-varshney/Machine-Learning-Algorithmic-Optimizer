@@ -1,4 +1,4 @@
-BASE_DIR = 'app/Machine Learning Algorithmic Optimizer/'
+BASE_DIR = 'https://github.com/Code-with-Palak/Machine-Learning-Algorithmic-Optimizer/'
 import warnings
 from numpy.lib.function_base import average
 import matplotlib.pyplot as plt
