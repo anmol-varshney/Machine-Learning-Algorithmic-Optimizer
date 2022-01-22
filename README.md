@@ -7,7 +7,7 @@ A handy tool to analyze and experiment Machine Learning techniques and Algorithm
 #### >> Access it using the link below
 https://ml-optimizer.herokuapp.com
 
-[![Snapshot](https://github.com/Code-with-Palak/Machine-Learning-Algorithmic-Optimizer/blob/main/tool.png)]
+![Snapshot](https://github.com/Code-with-Palak/Machine-Learning-Algorithmic-Optimizer/blob/main/tool.png)
 
 ## Services Provided
 #### Data Upload
