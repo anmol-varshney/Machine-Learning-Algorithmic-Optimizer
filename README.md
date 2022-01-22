@@ -1,7 +1,4 @@
 
-![Logo](https://github.com/Code-with-Palak/Machine-Learning-Algorithmic-Optimizer/blob/main/logo.jpg)
-
-
 # 😎 Machine-Learning-Algorithmic-Optimizer 
 
 A handy tool to analyze and experiment Machine Learning techniques and Algorithms over different real-world dataset for bringing up a breakthrough in the quality of results.
@@ -11,7 +8,7 @@ A handy tool to analyze and experiment Machine Learning techniques and Algorithm
 https://ml-optimizer.herokuapp.com
 ## Look, How it works!
 
-https://github.com/Code-with-Palak/Machine-Learning-Algorithmic-Optimizer/blob/main/Project%20Video.mp4
+![Demo-video](https://github.com/Code-with-Palak/Machine-Learning-Algorithmic-Optimizer/blob/main/Project%20Video.mp4)
 
 
 ## Services Provided
@@ -55,7 +52,7 @@ Accuracy Score, Classification Report, Confusion Matrix, F1-Score, Jaccard Score
 
 
 ## 🔗 Links
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/palak-gupta-ML)
+[![linkedin](https://img.shields.io/badge/Palak_gupta-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](www.linkedin.com/in/palak-gupta-ML)
 
 
 ## Authors
